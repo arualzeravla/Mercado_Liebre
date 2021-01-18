@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+    }
+
+body{
+        background-color:  #ebebeb ;
+    }
+
+header{
+    background-color: #EAC926;
+    color: #03264C;
+}
+
+.logo {
+    width: 50vw;
+    margin-bottom: 25px;
+    margin-left: 0%;
+}
+
+.subtitulo {
+    text-align: center;
+    margin: 20px;
+    font-size: 12px
+}
+
+.menu-acciones {
+    display: none;
+}
+
+.menu-acciones ul {
+    list-style: none;
+    margin-left: -30px;  
+}
+.menu-acciones a {
+    text-decoration: none;
+    color: #03264C;
+}
+
+.burger-menu{
+    width: 100vw;
+    text-align: center;
+}
+
+.burger-menu a {
+    color:white;
+    background-color: #1259c3;
+    border-radius: 15%;
+    margin: 0 auto;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    padding-top: 8px;
+}
+
+.banner img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+main {
+    margin:auto;
+    width: 90vw;
+}
+
+.destacados {
+    margin-top: 10%;
+}
+.ofertas {
+    margin-top: 10%;
+}
+
+.info-producto {
+    border-top: 1px;
+    border-top-style: solid;
+    border-top-color: #ebebeb;
+    background-color: white;
+    padding: 15px;
+    width: 90vw;
+}
+
+.info-producto i{
+    color: #39b54a;
+}
+
+.producto img {
+    width: 90vw;
+    }
+
+.producto{
+    margin-bottom: 10px;
+}
+
+.titulares {
+    font-size: 24px;
+    color: #666;
+}
+.precio {
+    font-size: 18px;
+    color: black
+}
+.descuento {
+    font-size: 16px;
+    color: #39b54a;
+    line-height: 0%;
+}
+.descripcion {
+    font-size: 16px;
+    margin-top: 30px;
+    color: #666;
+    display: none;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    color: #666; 
+    padding-bottom: 10px;
+    width: 90vw;
+    margin: auto;
+}
+
+.facilidades p{
+    font-size: 14px;
+    color: #666;
+}
+
+#copyright {
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+article{
+    box-shadow : 0px 0px 10px rgb(100,100,100);
+}
+
+
+.facilidades{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.facilidades i {
+    margin-top: 30px;
+    color:#1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.facilidades h3{
+    line-height: 0%;
+}
+
+@media (min-width: 361px){
+    .descripcion {
+        display: block;
+    }
+    
+    .menu-acciones {
+        display: block;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
