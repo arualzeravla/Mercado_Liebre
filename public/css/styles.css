@@ -1,118 +1,168 @@
 * {
     box-sizing: border-box;
-    font-family: "Roboto";
-    }
+    margin:0;
+}
 
 body{
-        background-color:  #ebebeb ;
-    }
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
 
-header{
+/* HEADER: */
+
+.main-header /* contenedor de logo, subtítulo, opciones de navegación y búsqueda */ {
     background-color: #EAC926;
     color: #03264C;
+    padding: 10px;
+}
+
+.main-header-top-bar /* contenedor logo y subtítulo */ {
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 50vw;
-    margin-bottom: 25px;
-    margin-left: 0%;
+    width: 40%;
+   
 }
 
-.subtitulo {
-    text-align: center;
-    margin: 20px;
-    font-size: 12px
+/* BARRA DE BÚSQUEDA: */
+.search-bar {
+    width: 100%;
+    margin: 20px 0px 30px;
 }
 
-.menu-acciones {
+form{
+    border-radius:10px;
+    margin-left: 17px;
+    display: flex;
+}
+
+form input {
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+    display:inline-block;
+    width: 90%;
+}
+
+.fa-search{
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+
+
+.subtitle /* "Comprá en cuotas y sin tarjeta de crédito" */ {
+    text-align: right;
+    color: black;
+    font-size: 14px;
+    font-weight: 200;
+    width: 50%;
+}
+
+/*OPCIONES DE NAVEGACION*/
+.nav-bar {
     display: none;
-}
-
-.menu-acciones ul {
-    list-style: none;
-    margin-left: -30px;  
-}
-.menu-acciones a {
-    text-decoration: none;
-    color: #03264C;
-}
-
-.burger-menu{
-    width: 100vw;
-    text-align: center;
 }
 
 .burger-menu a {
     color:white;
-    background-color: #1259c3;
-    border-radius: 15%;
-    margin: 0 auto;
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    padding-top: 8px;
+    background-color: #03264C;
+    border-radius: 8px;
+    display: block;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
 }
 
-.banner img {
-    width: 100%;
-    margin-top: 20px;
+/* BANNER: */
+.banner {
+    width: 100vw;
 }
 
+/* LISTAS DE PRODUCTOS: */
 main {
     margin:auto;
     width: 90vw;
 }
 
-.destacados {
-    margin-top: 10%;
-}
-.ofertas {
-    margin-top: 10%;
+.titulares /* TITULOS DE LAS LISTAS DE PRODUCTOS: */ {
+    font-size: 24px;
+    color: #666;
+    margin: 15px 0;
 }
 
-.info-producto {
+.tit-ofertas{
+    margin-top: 50px;
+}
+
+.producto /*contenedor de cada artículo (imagen + info) */ {
+    margin-bottom: 10px;
+    box-shadow : 0px 0px 10px rgb(100,100,100);
+}
+
+.producto img {
+    max-width: 100%;
+}
+
+.info-producto /* Contenedor: DETALLES DE LOS PRODUCTOS: */ {
     border-top: 1px;
     border-top-style: solid;
     border-top-color: #ebebeb;
     background-color: white;
     padding: 15px;
-    width: 90vw;
+    max-width: 100%;
+    position: relative;
 }
 
-.info-producto i{
+.info-producto i /* icono envío */ {
     color: #39b54a;
-}
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+} 
 
-.producto img {
-    width: 90vw;
-    }
-
-.producto{
-    margin-bottom: 10px;
-}
-
-.titulares {
-    font-size: 24px;
-    color: #666;
-}
 .precio {
     font-size: 18px;
-    color: black
+    color: black;
 }
+
 .descuento {
     font-size: 16px;
     color: #39b54a;
-    line-height: 0%;
-}
-.descripcion {
-    font-size: 16px;
-    margin-top: 30px;
-    color: #666;
-    display: none;
+    margin-left: 15px;
 }
 
+.precio-y-dto{
+    display: flex;
+    align-items: center;
+}
+
+.descripcion {
+    font-size: 16px;
+    color: #666;
+    display: none;
+    margin: auto;
+    padding: 18px 0;
+}
+
+/* FOOTER: */
+
 footer {
-    background-color: white;
+    background-color: #ebebeb;
     text-align: center;
     color: #666; 
     padding-bottom: 10px;
@@ -120,24 +170,7 @@ footer {
     margin: auto;
 }
 
-.facilidades p{
-    font-size: 14px;
-    color: #666;
-}
-
-#copyright {
-    text-align: left;
-    color: #666;
-    font-size: 14px;
-    margin-top: 60px;
-}
-
-article{
-    box-shadow : 0px 0px 10px rgb(100,100,100);
-}
-
-
-.facilidades{
+.facilidades /* contenedor ícono + título + descripción */ {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -149,19 +182,112 @@ article{
     margin-bottom: 10px;
 }
 
-.facilidades h3{
-    line-height: 0%;
+.facilidades h3 {
+    margin-bottom: 7px;
 }
 
-@media (min-width: 361px){
-    .descripcion {
+.facilidades p {
+    font-size: 14px;
+    color: #666;
+}
+
+#copyright {
+    text-align: left;
+    color: #666;
+    font-size: 14px;
+    margin-top: 60px;
+}
+
+
+/* PARA TABLETS: */
+
+@media (min-width: 768px){
+    .descripcion /* para visualizar la descripcion del producto: */ {
         display: block;
     }
     
-    .menu-acciones {
-        display: block;
+    .nav-bar /* para visualizar las opciones de navegación: */ {
+        display: flex;
+        justify-content: space-between;
     }
-    .burger-menu {
+
+    /* Para configurar visualización correcta de las opciones de navegación: */
+    .nav-bar ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-bar li{
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    .nav-bar a {
+        text-decoration: none;
+        color: #03264C;
+    }
+
+    .burger-menu /* Esconder el menú hamburguesa: */ {
         display: none;
     }
+
+/* AJUSTES DE VISUALIZACIÓN ESTÉTICOS: */
+
+    .logo {
+        width: 35%;
+    }
+    
+    .subtitle /* Manito + "Comprá en cuotas y sin tarjeta de crédito" */ {
+        font-size: 16px;
+    }
+
+    .search-bar{
+        width: 65%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    /*Configuración horizontal de productos: */
+    .destacados, .ofertas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .producto{
+        width: 49%; /* Para que queden 2 artículos por fila */
+    }
+}
+
+
+/* PARA DESKTOP: */
+
+@media (min-width: 1200px){
+  
+  .main-header-top-bar, .nav-bar{
+    max-width: 1200px;
+    margin: auto;
+  }  
+  
+  .logo {
+      width: 30%;
+  }
+  .subtitle{
+      font-size: 20px;
+  }
+  
+  form{
+      height: 30px;
+  }
+
+  .producto{
+      width: 24%; /*Para que se vean 4 por fila*/
+  }
+
+  .nav-bar{
+      max-width: 75%;
+  }
+
 }
